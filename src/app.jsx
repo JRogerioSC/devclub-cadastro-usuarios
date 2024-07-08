@@ -1,18 +1,14 @@
-import { Title, Container } from './styles'
+import React from 'react';
+import { Title, Container, TopBackground, ContainerInputs, InputLabel } from './styles';
 
 export function Home() {
-
   return (
-
-
-
     <Container>
       <TopBackground>
         <img src="" alt="" />
       </TopBackground>
 
       <form>
-
         <Title>Cadastrar usuários</Title>
 
         <ContainerInputs>
@@ -24,37 +20,23 @@ export function Home() {
               <input type="text" placeholder='Nome do Usuário' />
             </div>
             <InputLabel>
-
               Idade<span>*</span>
-
             </InputLabel>
-
             <input type="number" placeholder='Idade do Usuário' />
-
           </div>
 
-          <dir>
-
+          <div>
             <InputLabel>
-
               E-Mail<span>*</span>
-
             </InputLabel>
-
-            <input type="Email" placeholder='Email do Usuário' />
-
-          </dir>
-
+            <input type="email" placeholder='Email do Usuário' />
+          </div>
         </ContainerInputs>
 
-        <button>Cadastrar Usuários</button>
-
+        <button type="submit">Cadastrar Usuários</button>
       </form>
-
-    </Container >
-
-  )
-
+    </Container>
+  );
 }
 
-export default Home
+export default Home;
