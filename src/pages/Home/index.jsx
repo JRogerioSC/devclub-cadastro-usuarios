@@ -6,11 +6,13 @@ import {
   Title,
   Container,
   TopBackground,
+  Form,
   ContainerInputs,
-  InputLabel
+  InputLabel,
 } from './styles'
 
 import UsersImage from '../../pages/Home/assets/users.png'
+import Button from '../../components/Button'
 
 export function Home() {
   const inputName = useRef()
@@ -65,7 +67,7 @@ export function Home() {
           </div>
         </ContainerInputs>
       </form>
-      
+
       <div>
         <InputLabel>
           E-Mail<span> *</span>
