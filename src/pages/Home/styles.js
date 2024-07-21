@@ -11,6 +11,7 @@ padding: 20px;
 height:100vh;
 
 `
+    
 
 export const TopBackground = styled.div`
 background: linear-gradient(to right,#fe7e5d,#7f3841);
@@ -30,7 +31,7 @@ img{
 
 `
 
-export const form = styled.form`
+export const Form = styled.form`
 display:flex;
 flex-direction:column;
 align-items: center;

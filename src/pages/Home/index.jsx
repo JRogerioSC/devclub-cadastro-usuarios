@@ -1,18 +1,20 @@
 import { useRef } from 'react'
 import api from '../../services/api'
 
+
 import React from 'react'
 import {
   Title,
   Container,
-  TopBackground,
   Form,
   ContainerInputs,
   InputLabel,
+  TopBackground,
 } from './styles'
 
-import UsersImage from '../../pages/Home/assets/users.png'
+
 import Button from '../../components/Button'
+import { Background } from '../../components/Button/TopBackground/styles'
 
 export function Home() {
   const inputName = useRef()
@@ -44,11 +46,11 @@ export function Home() {
 
   return (
     <Container>
-      <TopBackground>
-        <img src={UsersImage} alt='imagem-usuarios' />
-      </TopBackground>
 
-      <form>
+      <TopBackground />
+
+
+      <Form>
         <Title>Cadastrar usuários</Title>
 
         <ContainerInputs>
@@ -66,16 +68,19 @@ export function Home() {
             <input type="number" placeholder='Idade do Usuário' ref={inputAge} />
           </div>
         </ContainerInputs>
-      </form>
 
-      <div>
-        <InputLabel>
-          E-Mail<span> *</span>
-        </InputLabel>
-        <input type="email" placeholder='Email do Usuário' ref={inputEmail} />
-      </div>
 
-      <button type="button" onClick={registerNewUser}>Cadastrar Usuários</button>
+        <div>
+          <InputLabel>
+            E-Mail<span> *</span>
+          </InputLabel>
+          <input type="email" placeholder='Email do Usuário' ref={inputEmail} />
+        </div>
+
+        <button type="button" onClick={registerNewUser}>
+          Cadastrar Usuários
+        </button>
+      </Form>
     </Container>
   )
 }
