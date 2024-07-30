@@ -1,54 +1,42 @@
-import { useRef } from 'react'
-import api from '../../services/api'
-
-
-import React from 'react'
-import {
-  Title,
-  Container,
-  Form,
-  ContainerInputs,
-  InputLabel,
-  TopBackground,
-} from './styles'
-
-
-import Button from '../../components/Button'
-import { Background } from '../../components/Button/TopBackground/styles'
+import React, { useRef } from 'react';
+import api from '../../services/api';
+import { Title, Container, Form, ContainerInputs, InputLabel, TopBackground, StyledImage } from './styles';
+import Button from '../../components/Button';
+import usersImage from '../../assets/users.png';
 
 export function Home() {
-  const inputName = useRef()
-  const inputAge = useRef()
-  const inputEmail = useRef()
+  const inputName = useRef();
+  const inputAge = useRef();
+  const inputEmail = useRef();
 
   async function registerNewUser() {
     const email = inputEmail.current.value;
-    const age = parseInt(inputAge.current.value, 10)
-    const name = inputName.current.value
+    const age = parseInt(inputAge.current.value, 10);
+    const name = inputName.current.value;
 
     if (isNaN(age)) {
-      alert("Por favor, insira um valor numérico válido para a idade.")
-      return
+      alert("Por favor, insira um valor numérico válido para a idade.");
+      return;
     }
 
     try {
       const { data } = await api.post('/usuarios', {
         email,
         age,
-        name
-      })
+        name,
+      });
 
       console.log(data);
     } catch (error) {
-      console.error("Erro ao registrar novo usuário:", error)
+      console.error("Erro ao registrar novo usuário:", error);
     }
   }
 
   return (
     <Container>
-
-      <TopBackground />
-
+      <TopBackground>
+        <StyledImage src={usersImage} alt="Users" />
+      </TopBackground>
 
       <Form>
         <Title>Cadastrar usuários</Title>
@@ -69,7 +57,6 @@ export function Home() {
           </div>
         </ContainerInputs>
 
-
         <div>
           <InputLabel>
             E-Mail<span> *</span>
@@ -82,7 +69,7 @@ export function Home() {
         </button>
       </Form>
     </Container>
-  )
+  );
 }
 
-export default Home
+export default Home;
