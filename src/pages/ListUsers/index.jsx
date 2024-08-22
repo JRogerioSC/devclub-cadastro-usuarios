@@ -1,14 +1,15 @@
 import Button from "../../components/Button"
 import { TopBackground } from "../Home/styles"
-
+import usersImage from "../../assets/users.png"
 
 function ListUsers() {
 
     return (
         <div>
 
-
-            <TopBackground />
+            <TopBackground>
+                <StyledImage src={usersImage} alt="Users" />
+            </TopBackground>
 
 
 

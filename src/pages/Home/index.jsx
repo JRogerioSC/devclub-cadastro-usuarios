@@ -1,22 +1,22 @@
-import React, { useRef } from 'react';
-import api from '../../services/api';
+import React, { useRef } from 'react'
+import api from '../../services/api'
 import { Title, Container, Form, ContainerInputs, InputLabel, TopBackground, StyledImage } from './styles';
-import Button from '../../components/Button';
-import usersImage from '../../assets/users.png';
+import Button from '../../components/Button'
+import usersImage from '../../assets/users.png'
 
 export function Home() {
-  const inputName = useRef();
-  const inputAge = useRef();
-  const inputEmail = useRef();
+  const inputName = useRef()
+  const inputAge = useRef()
+  const inputEmail = useRef()
 
   async function registerNewUser() {
-    const email = inputEmail.current.value;
-    const age = parseInt(inputAge.current.value, 10);
+    const email = inputEmail.current.value
+    const age = parseInt(inputAge.current.value, 10)
     const name = inputName.current.value;
 
     if (isNaN(age)) {
-      alert("Por favor, insira um valor numérico válido para a idade.");
-      return;
+      alert("Por favor, insira um valor numérico válido para a idade.")
+      return
     }
 
     try {
@@ -28,7 +28,7 @@ export function Home() {
 
       console.log(data);
     } catch (error) {
-      console.error("Erro ao registrar novo usuário:", error);
+      console.error("Erro ao registrar novo usuário:", error)
     }
   }
 
@@ -72,4 +72,4 @@ export function Home() {
   );
 }
 
-export default Home;
+export default Home
