@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import { useNavigate } from 'react-router-dom';
 import api from '../../services/api'
 import { Title, Container, Form, ContainerInputs, InputLabel, TopBackground, StyledImage } from './styles';
 import Button from '../../components/Button'
@@ -8,6 +9,8 @@ export function Home() {
   const inputName = useRef()
   const inputAge = useRef()
   const inputEmail = useRef()
+
+  const navigate = useNavigate()
 
   async function registerNewUser() {
     const email = inputEmail.current.value
@@ -64,10 +67,14 @@ export function Home() {
           <input type="email" placeholder='Email do Usuário' ref={inputEmail} />
         </div>
 
-        <button type="button" onClick={registerNewUser}>
+        <button type="button" onClick={registerNewUser} theme="primary">
           Cadastrar Usuários
         </button>
       </Form>
+
+      <button type="button" onClick={() => navigate('/lista-de-usuarios')}>
+        Ver Lista de Usuários
+      </button>
     </Container>
   );
 }

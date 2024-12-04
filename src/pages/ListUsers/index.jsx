@@ -1,23 +1,65 @@
+import { useEffect, useState } from 'react'
+import api from "../../services/api"
+
 import Button from "../../components/Button"
-import { TopBackground } from "../Home/styles"
-import usersImage from "../../assets/users.png"
+import { Container, StyledImage, Title, TopBackground } from "../Home/styles"
+import Trash from '../../assets/trash.svg'
+
+import { Container, ContainerUsers, CardUsers, TrashIcon, Title } from './styles'
 
 function ListUsers() {
+    const [users, setUsers] = useState([])
+
+
+    useEffect(() => {
+        async function getUsers() {
+            const { data } = await api.get('/usuarios')
+            setUsers(data)
+
+        }
+        getUsers()
+
+    }, [])
+
 
     return (
-        <div>
+        <Container>
 
             <TopBackground>
                 <StyledImage src={usersImage} alt="Users" />
             </TopBackground>
 
+            <Title>Lista de usuarios</Title>
+            <ContainerUsers>
+                {users.map((user) => (
+                    <CardUsers key={user.id}>
+
+                        <AvatarUser src={`https://avatar.iran.liara.run/public/?username=${user.id}`} />
+
+
+                        <div >
+                            <h3>{user.name}</h3>
+                            <p>{user.age}</p>
+                            <p>{user.email}</p>
+
+                        </div>
+                        <TrashIcon src={Trash} alt='icone-lixo' />
+                    </CardUsers>
+                ))}
+
+
+            </ContainerUsers>
 
 
 
 
-            <h1>Listagem de usuarios</h1>
-            <Button>Voltar</Button>
-        </div >
+
+
+
+
+            <button type="button">Voltar</button>
+
+        </Container >
     )
 }
 

@@ -1,9 +1,9 @@
 import styled from "styled-components"
 
 export const MyButton = styled.button`
-border:none;
+border: ${props => props.theme === 'primary' ? 'none' : '1px solid aqua'};
 text-align:center;
-background-color:black;
+background: ${(props) => props.theme === 'primary' ? 'blue' : 'transparent'};
 font-size:25px;
 color:aqua;
 width: fit-content;
