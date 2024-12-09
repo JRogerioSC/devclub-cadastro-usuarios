@@ -1,15 +1,13 @@
 import { useEffect, useState } from 'react'
 import api from "../../services/api"
-
 import Button from "../../components/Button"
-import { Container, StyledImage, Title, TopBackground } from "../Home/styles"
+import { StyledImage, Title as HomeTitle, TopBackground } from "../Home/styles"
 import Trash from '../../assets/trash.svg'
-
 import { Container, ContainerUsers, CardUsers, TrashIcon, Title } from './styles'
 
 function ListUsers() {
     const [users, setUsers] = useState([])
-
+    
 
     useEffect(() => {
         async function getUsers() {
@@ -34,7 +32,7 @@ function ListUsers() {
                 {users.map((user) => (
                     <CardUsers key={user.id}>
 
-                        <AvatarUser src={`https://avatar.iran.liara.run/public/?username=${user.id}`} />
+                        <AvatarUser src={https://avatar.iran.liara.run/public/?username=${user.id}} />
 
 
                         <div >
