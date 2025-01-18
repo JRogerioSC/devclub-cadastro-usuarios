@@ -11,15 +11,6 @@ justify-content:space-evenly;
 padding:20px;
 `
 
-export const Title = styled.h2`
- color: #fff;
-  text-align: center;
-  font-size: 38px;
-  font-style: normal;
-  font-weight: 600;
-  margin-top:30px;
-`
-
 export const ContainerUsers = styled.div`
  display:grid;
  grid-template-columns:1fr 1fr;
@@ -70,4 +61,13 @@ export const TrashIcon = styled.img`
 
 export const AvatarUser = styled.img`
  height:80px;
+`
+
+export const Title = styled.h2`
+ color: #fff;
+  text-align: center;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 600;
+  margin-top:30px;
 `
