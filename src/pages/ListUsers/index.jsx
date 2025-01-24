@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react'
 import api from "../../services/api"
 import Button from "../../components/Button"
+import usersImage from '../../assets/users.png'
 import { StyledImage, Title as HomeTitle, TopBackground } from "../Home/styles"
 import Trash from '../../assets/trash.svg'
 import { Container, ContainerUsers, CardUsers, TrashIcon, AvatarUser, Title } from './styles'
 
 function ListUsers() {
     const [users, setUsers] = useState([])
-    const [usersImage, setUsersImage] = useState('')
+    const [usersImg, setUsersUsersImage] = useState('')
 
     useEffect(() => {
         async function getUsers() {
@@ -20,8 +21,8 @@ function ListUsers() {
 
     return (
         <Container>
-
             <TopBackground>
+
                 <StyledImage src={usersImage} alt="Users" />
             </TopBackground>
 
