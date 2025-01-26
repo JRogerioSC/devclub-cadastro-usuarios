@@ -7,6 +7,8 @@ import Edit from '../../assets/edit.svg'
 import Trash from '../../assets/trash.svg'
 import { Container, ContainerUsers, CardUsers, TrashIcon, AvatarUser, Title } from './styles'
 
+const baseUrl = "";
+
 function ListUsers() {
     const [users, setUsers] = useState([])
     const [usersImg, setUsersUsersImage] = useState('')
