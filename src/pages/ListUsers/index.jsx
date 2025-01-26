@@ -7,7 +7,7 @@ import Edit from '../../assets/edit.svg'
 import Trash from '../../assets/trash.svg'
 import { Container, ContainerUsers, CardUsers, TrashIcon, AvatarUser, Title } from './styles'
 
-const baseUrl = "";
+const baseUrl = "https://conceitos-node-crud.vercel.app/";
 
 function ListUsers() {
     const [users, setUsers] = useState([])
