@@ -3,6 +3,7 @@ import api from "../../services/api"
 import Button from "../../components/Button"
 import usersImage from '../../assets/users.png'
 import { StyledImage, Title as HomeTitle, TopBackground } from "../Home/styles"
+import Edit from '../../assets/edit.svg'
 import Trash from '../../assets/trash.svg'
 import { Container, ContainerUsers, CardUsers, TrashIcon, AvatarUser, Title } from './styles'
 
