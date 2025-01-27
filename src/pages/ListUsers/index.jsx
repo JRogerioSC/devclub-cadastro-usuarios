@@ -22,7 +22,7 @@ function ListUsers() {
     }, [])
 
     async function deleteUsers(id) {
-        await api.delete(`/usuarios/id/${id}`)
+        await api.delete(/usuarios/id/${id})
         
         const upadatedUsers = users.filter(user => user.id !== id)
 
@@ -40,7 +40,7 @@ function ListUsers() {
             <ContainerUsers>
                 {users.map((user) => (
                     <CardUsers key={user.id}>
-                        <AvatarUser src={`https://avatar.iran.liara.run/public?username=${user.id}`} />
+                        <AvatarUser src={https://avatar.iran.liara.run/public?username=${user.id}} />
                         <div>
                             <h3>{user.name}</h3>
                             <p>{user.age}</p>
@@ -56,3 +56,4 @@ function ListUsers() {
 }
 
 export default ListUsers
+
