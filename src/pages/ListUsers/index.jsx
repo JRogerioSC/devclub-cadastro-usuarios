@@ -22,8 +22,8 @@ function ListUsers() {
     }, [])
 
     async function deleteUsers(id) {
-        await api.delete(/usuarios/id/${id})
-        
+        await api.delete(/usuarios/id / ${ id })
+
         const upadatedUsers = users.filter(user => user.id !== id)
 
         setUsers(upadatedUsers)
