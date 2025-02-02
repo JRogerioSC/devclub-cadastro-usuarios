@@ -11,7 +11,7 @@ function ListUsers() {
     const [users, setUsers] = useState([])
     const [usersImg, setUsersImage] = useState('')
     const navigate = useNavigate()
-
+    
     useEffect(() => {
         async function getUsers() {
             const { data } = await api.get('/usuarios')
