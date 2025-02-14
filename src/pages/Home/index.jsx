@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { useNavigate } from 'react-router-dom';
 import api from '../../services/api'
-import { Title, Container, Form, ContainerInputs, InputLabel, TopBackground, StyledImage } from './styles';
+import { Title, Container,Input, Form, ContainerInputs, InputLabel, TopBackground, StyledImage } from './styles';
 import Button from '../../components/Button'
 import usersImage from '../../assets/users.png'
 
@@ -48,16 +48,16 @@ export function Home() {
         <ContainerInputs>
           <div style={{ width: '100%' }}>
             <InputLabel>
-              Nome<span> *</span>
+            Nome<span> *</span>
             </InputLabel>
-            <input type="text" placeholder='Nome do Usuário' ref={inputName} />
+            <Input type="text" placeholder='Nome do Usuário' ref={inputName} />
           </div>
 
           <div>
             <InputLabel>
               Idade<span> *</span>
             </InputLabel>
-            <input type="number" placeholder='Idade do Usuário' ref={inputAge} />
+            <Input type="number" placeholder='Idade do Usuário' ref={inputAge} />
           </div>
         </ContainerInputs>
 
@@ -65,17 +65,17 @@ export function Home() {
           <InputLabel>
             E-Mail<span> *</span>
           </InputLabel>
-          <input type="email" placeholder='Email do Usuário' ref={inputEmail} />
+          <Input type="email" placeholder='Email do Usuário' ref={inputEmail} />
         </div>
 
-        <button type="button" onClick={registerNewUser} theme="primary">
+        <Button type="button" onClick={registerNewUser} theme="primary">
           Cadastrar Usuários
-        </button>
+        </Button>
       </Form>
 
-      <button type="button" onClick={() => navigate('/lista-de-usuarios')}>
+      <Button type="button" onClick={() => navigate('/lista-de-usuarios')}>
         Ver Lista de Usuários
-      </button>
+      </Button>
     </Container>
   );
 }
