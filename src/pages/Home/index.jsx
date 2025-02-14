@@ -5,6 +5,7 @@ import { Title, Container, Form, ContainerInputs, InputLabel, TopBackground, Sty
 import Button from '../../components/Button'
 import usersImage from '../../assets/users.png'
 
+
 export function Home() {
   const inputName = useRef()
   const inputAge = useRef()

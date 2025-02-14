@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react'
 import api from "../../services/api"
 import Button from "../../components/Button"
 import usersImage from '../../assets/users.png'
+import styled from "styled-components"
 import { StyledImage, Title as HomeTitle, TopBackground } from "../Home/styles"
-import Trash from '../../assets/trash.svg'
+import Trash from "../../assets/trash.svg"
 import { Container, ContainerUsers, CardUsers, TrashIcon, AvatarUser, Title } from './styles'
 import { useNavigate } from 'react-router-dom'
 

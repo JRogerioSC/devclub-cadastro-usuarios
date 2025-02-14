@@ -4,6 +4,7 @@ import { GlobalStyles } from './GlobalStyles.js'
 import {RouterProvider} from 'react-router-dom'
 import Router  from './routes.jsx'
 import router from './routes.jsx'
+import styled from "styled-components"
 
 ReactDom.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
@@ -12,3 +13,4 @@ ReactDom.createRoot(document.getElementById('root')).render(
     </React.StrictMode>,
 
 )
+
