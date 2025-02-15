@@ -51,7 +51,7 @@ function ListUsers() {
                     </CardUsers>
                 ))}
             </ContainerUsers>
-            <button type="button" onClick={() => navigate('/')}>Voltar</button>
+            <Button type="button" onClick={() => navigate('/')}>Voltar</Button>
         </Container>
     )
 }
