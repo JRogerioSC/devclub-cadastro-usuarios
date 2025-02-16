@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { useNavigate } from 'react-router-dom';
 import api from '../../services/api'
-import { Title, Container,Input, Form, ContainerInputs, InputLabel, TopBackground, StyledImage } from './styles';
+import { Title, Container, Input, Form, ContainerInputs, InputLabel, TopBackground, StyledImage } from './styles';
 import Button from '../../components/Button'
 import usersImage from '../../assets/users.png'
 
@@ -48,7 +48,7 @@ export function Home() {
         <ContainerInputs>
           <div style={{ width: '100%' }}>
             <InputLabel>
-            Nome<span> *</span>
+              Nome<span> *</span>
             </InputLabel>
             <Input type="text" placeholder='Nome do Usuário' ref={inputName} />
           </div>
@@ -57,7 +57,7 @@ export function Home() {
             <InputLabel>
               Idade<span> *</span>
             </InputLabel>
-            <Input type="number" placeholder='Idade do Usuário' ref={inputAge} />
+            <Input type="number" placeholder='Idade' ref={inputAge} />
           </div>
         </ContainerInputs>
 
@@ -65,7 +65,7 @@ export function Home() {
           <InputLabel>
             E-Mail<span> *</span>
           </InputLabel>
-          <Input type="email" placeholder='Email do Usuário' ref={inputEmail} />
+          <Input type="email" placeholder='Email' ref={inputEmail} />
         </div>
 
         <Button type="button" onClick={registerNewUser} theme="primary">
