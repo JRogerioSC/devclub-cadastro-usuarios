@@ -13,6 +13,8 @@ Site: https://cadastrours.netlify.app/
 <p> - CSS <p/>
 <p> - JavaScript <p/>
 <p> - Node.Js <p/>
+<p> - React.Js <p/>
+<p> - MongoDB <p/>
 
 <img src="https://i.postimg.cc/zXHtBz7L/IMG-20251019-WA0075.jpg" />
 <br>
